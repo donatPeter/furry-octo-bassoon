@@ -11,7 +11,7 @@ export const Repos = () => {
     <>
       {isLoading && <ProgressBar />}
       {!isLoading && error && <Error />}
-      {!isLoading && <ReposTable repos={repos} />}
+      {!isLoading && !error && <ReposTable repos={repos} />}
     </>
   );
 };
