@@ -26,7 +26,7 @@ const columns = [
 export const ReposTable = ({ repos }: Props) => {
   const history = useHistory();
 
-  const showRepoDetails = (id: string) => {
+  const showRepoDetails = (id: number) => {
     history.push(`/repo/${id}`);
   };
 
