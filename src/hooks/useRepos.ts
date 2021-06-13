@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { Repo } from "../types/repo.type";
+import { IRepo } from "../types/repo.type";
 
 export const useRepos = () => {
-  const [repos, setRepos] = useState<Repo[]>([]);
+  const [repos, setRepos] = useState<IRepo[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(false);
 

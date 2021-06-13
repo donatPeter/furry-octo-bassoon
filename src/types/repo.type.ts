@@ -1,4 +1,4 @@
-export interface Repo {
+export interface IRepo {
   id: string;
   name: string;
   description: string;
