@@ -9,10 +9,11 @@ import {
   TableHead,
   TableRow,
 } from "@material-ui/core";
-import { Repo } from "../types/repo.type";
+import { IRepo } from "../types/repo.type";
+import { useHistory } from "react-router-dom";
 
 interface Props {
-  repos: Repo[];
+  repos: IRepo[];
 }
 
 const columns = [
@@ -23,6 +24,12 @@ const columns = [
 ];
 
 export const ReposTable = ({ repos }: Props) => {
+  const history = useHistory();
+
+  const showRepoDetails = (id: string) => {
+    history.push(`/repo/${id}`);
+  };
+
   return (
     <Box padding="2rem">
       <Paper>
@@ -38,7 +45,11 @@ export const ReposTable = ({ repos }: Props) => {
             <TableBody>
               {repos.map((repo) => {
                 return (
-                  <TableRow hover key={repo.id}>
+                  <TableRow
+                    hover
+                    key={repo.id}
+                    onClick={() => showRepoDetails(repo.id)}
+                  >
                     {columns.map((column) => {
                       const value = repo[column.id];
                       return (
