@@ -1,10 +1,8 @@
-import React from 'react';
+import React from "react";
+import { AppRouter } from "./AppRouter";
 
-function App() {
-    return (
-        <div>Place solution here
-        </div>
-    );
-}
+const App = () => {
+  return <AppRouter />;
+};
 
 export default App;
