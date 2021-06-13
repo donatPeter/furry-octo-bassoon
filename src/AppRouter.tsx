@@ -1,13 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { RepoList } from "./pages/RepoList";
+import { Repos } from "./pages/Repos";
 
 export const AppRouter = () => {
   return (
     <Router>
       <Switch>
         <Route path="/">
-          <RepoList />
+          <Repos />
         </Route>
       </Switch>
     </Router>
