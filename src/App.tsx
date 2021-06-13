@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 const App = () => {
   return (
     <QueryClientProvider client={new QueryClient()}>
-      <AppRouter />;
+      <AppRouter />
     </QueryClientProvider>
   );
 };
